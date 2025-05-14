@@ -1,0 +1,171 @@
+/* Basic reset and global styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: #1f2937;
+  background-color: #f9fafb;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.5;
+}
+
+/* Basic form styling */
+input, select, textarea {
+  display: block;
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.375rem;
+  color: #1f2937;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+/* Table styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  text-align: left;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #6b7280;
+  font-weight: 600;
+  padding: 0.75rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+td {
+  padding: 0.75rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+/* Focus styles */
+*:focus {
+  outline: none;
+}
+
+/* Custom scrollbar for a modern look */
+@media (min-width: 768px) {
+  ::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #d1d5db;
+    border-radius: 10px;
+    border: 3px solid #f1f1f1;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #9ca3af;
+  }
+}
+
+/* Animations */
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Responsive table styles */
+.spreadsheet-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.spreadsheet-table th {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: #f9fafb;
+  text-align: left;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.spreadsheet-cell {
+  transition: background-color 0.15s;
+}
+
+.spreadsheet-cell-hover {
+  background-color: #eff6ff;
+}
+
+.spreadsheet-cell-editable:hover {
+  background-color: #f3f4f6;
+}
+
+/* Toast notifications */
+.toast {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  background-color: white;
+  border-left-width: 4px;
+  z-index: 50;
+  transform: translateY(0);
+  transition: all 0.3s;
+  min-width: 250px;
+  max-width: 450px;
+}
+
+.toast-success {
+  border-left-color: #10b981;
+}
+
+.toast-error {
+  border-left-color: #ef4444;
+}
+
+.toast-info {
+  border-left-color: #3b82f6;
+}
