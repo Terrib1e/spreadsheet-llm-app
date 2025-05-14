@@ -1,5 +1,5 @@
 import './App.css'
-import Spreadsheet from './components/Spreadsheet'
+import Spreadsheet from './features/spreadsheet'
 
 const styles = {
   container: {
