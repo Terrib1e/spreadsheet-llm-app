@@ -25,7 +25,7 @@ const SpreadsheetContent = () => {
   );
 };
 
-const Spreadsheet = () => {
+const SpreadsheetApp = () => {
   return (
     <SpreadsheetProvider>
       <SpreadsheetContent />
@@ -33,4 +33,4 @@ const Spreadsheet = () => {
   );
 };
 
-export default Spreadsheet;
+export default SpreadsheetApp;
